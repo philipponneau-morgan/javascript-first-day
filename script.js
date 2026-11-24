@@ -100,5 +100,23 @@ function echange_trois_valeurs(x, y, z) {
 console.log(echange_trois_valeurs(4, 8, 16))
 */
 
-// Exo 4 : fonction fléchée aire du rectangle 
+// Exo 4 : 1. 2. 3.
+function aireRectangle(l, L) {
+    return l * L
+}
+
+const aire_rectangle = function(largeur, longueur) {
+    return largeur * longueur
+}
+
 const aireR = (longueur, largeur) => (longueur * largeur)
+
+function appliquer(nombre, operation) {
+    return operation(nombre)
+}
+
+const doubler = (n) => n * 2
+const au_carre = (n) => n**2
+
+console.log(appliquer(5, doubler))
+console.log(appliquer(5, au_carre))
