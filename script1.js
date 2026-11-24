@@ -105,8 +105,8 @@ function aireRectangle(l, L) {
     return l * L
 }
 
-const aire_rectangle = function(largeur, longueur) {
-    return largeur * longueur
+const aire_rectangle = function(larg, long) {
+    return larg * long
 }
 
 const aireR = (longueur, largeur) => (longueur * largeur)
