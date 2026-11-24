@@ -40,4 +40,43 @@ for(let i = 0; i < bigNums.length; i++) {
     somme_tab_2 += bigNums[i]
 }
 
-console.log(somme_tab_1, somme_tab_2)
+console.log(somme_tab_1, somme_tab_2);
+
+// Exercice 4 :
+const students = [
+    {nom: "Jean", age: 18, note: 18}, 
+    {nom: "Fabrice", age: "on sait pas", note: 13}, 
+    {nom: "Bejamin", age: 18, note: 16}
+]
+
+// nom et note au-dessus de 12 :
+students.forEach(student => {
+    if (student.note > 12) {
+        console.log(student)
+    }
+});
+
+let nameOfStudents = []
+students.forEach(student => {
+    nameOfStudents.push(student.nom)
+});
+console.log(nameOfStudents)
+
+// Exercice 5 :
+const supinfoModule = {
+    nom: "1WEBD",
+    professeurs: "Mme Martin",
+    students: students,
+    addStudents: function(nom, age, note) {
+        this.students.push({nom: nom, age: age, note: note})
+    },
+    afficherMoyenne: function() {
+        const nb_notes = this.students.length;
+        let somme_notes = 0
+        this.students.forEach(student => {
+            somme_notes += student.note
+        });
+        
+        return somme_notes / nb_notes;
+    }
+};
